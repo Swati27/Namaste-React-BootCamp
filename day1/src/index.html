@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React Bootcamp</title>
+</head>
+<body>
+    <div>
+        <h1>Hello World by Plain HTML</h1>
+        <div id='root'></div>
+        <div id='root2'></div>
+        <script>
+            const root=document.getElementById('root');
+            const heading= document.createElement("h1");
+            heading.innerText = "Hello World by Javascript";
+            root.appendChild(heading);
+        </script>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> 
+        <script>
+            const heading2 = React.createElement("h1",{ id: 'title'},"Hello World By React");
+            const root2 = ReactDOM.createRoot(document.getElementById('root2'));
+            root2.render(heading2);
+        </script>     
+    </div>
+</body>
+</html>
