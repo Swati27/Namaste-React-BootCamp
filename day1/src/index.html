@@ -10,7 +10,8 @@
     <div>
         <h1>Hello World by Plain HTML</h1>
         <div id='root'></div>
-        <div id='root2'></div>
+        <div id='root2'> Not rendered</div> 
+        <!-- this will be replaced by heading2 by render method -->
         <script>
             const root=document.getElementById('root');
             const heading= document.createElement("h1");
@@ -21,7 +22,9 @@
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> 
         <script>
             const heading2 = React.createElement("h1",{ id: 'title'},"Hello World By React");
+            //assigning root to html element by ReactDOM.createRoot
             const root2 = ReactDOM.createRoot(document.getElementById('root2'));
+            // Render will replace whaterver there is in the root with heading 2
             root2.render(heading2);
         </script>     
     </div>
